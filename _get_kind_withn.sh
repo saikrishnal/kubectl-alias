@@ -1,4 +1,17 @@
 #!/bin/bash
+#-----------------------------------------------------------------------------------
+# Copyright(C) Ezio's Kingdom
+#-----------------------------------------------------------------------------------
+# Process Name:      _get_kind_withn.ksh
+# Date Written:      08/21/2018
+# Author:            Saikrishna Lakkavatri
+# Shell:             bash
+# Description:       This script will get pods or deploy or svc anything that matches kind in kubernetes
+#                    Assuming Namespace provided already created on Rancher Env.           
+#
+# Input Parameters:  "${env}" "get" "${kind}" -n "${namespace}" 
+#                    
+#------------------------------------------------------------------------------------
 
 K='kubectl'
 KG='kubectl --kubeconfig=/home/vagrant/gcp-cluster/kube-config'

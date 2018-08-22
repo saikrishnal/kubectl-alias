@@ -23,22 +23,24 @@ PODNAME=${5}
 R=$(tput setaf 1)
 G=$(tput setaf 2)
 Y=$(tput setaf 3)
+C=$(tput setaf 6)
 B=$(tput sgr0)
 NO=$(tput sgr0)
 
 #### LINE FUNCTIONS
 function START() {
-        echo "${G}START ===========================================================================================${NO}"
+        echo "${G}START >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>${NO}"
 }
 function END() {
-        echo "${Y}END ============================================================================================${NO}"
+        #echo "${C}END <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<${NO}"
+        echo "${C}END _________________________________________________________________________________________________${NO}"
 }
 
 #### MAIN SCRIPT
 ###### If verb matches GET and required KIND having a NAMESPACE
 if [ ${VERB} == "get" ]
 then
-  START
+#  START
   if [ ${1} != 0 ] && [ ${2} != 0 ] && [ -z ${3} ]; then
     ##### GET ANY KIND WITH DEFAULT VALUES #####
     echo "===== USE ${R}"kpre"${NO} =====> ${G} PRE:${NO} ${Y}(WSONL-PRE-RTP1)${NO} ===========> ${G}Verb: ${Y}${VERB}, ${G}Kind: ${Y}${KIND}${NO} "
@@ -56,6 +58,5 @@ then
   fi
   END
 else
-  echo "=======> Please do run "kubectl-alias" command to see preset aliases"
+  echo "=======> Please do run ${R}"kubectl-alias"${NO} command to see preset aliases"
 fi
-

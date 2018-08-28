@@ -63,7 +63,7 @@ then
     fi                                                                                                                  #<- End 1 #<----- End 2
   elif [ ${1} != 0 ] && [ ${2} != 0 ] && [ ! -z ${3} ] && [ ${3} != "-o" ] && [ ${3} != "grep" ]; then                  #<-------- Start 0
     ##### WITH NAMESPACE #####
-    if [ ${1} == "get" ] && [ ${3} == "-n" ] || [ ${5} == "grep" ]; then                                                        #<-------- Start 1
+    if [ ${1} == "get" ] && [ ${3} == "-n" ] || [[ ${5} == "grep" ]]; then                                                        #<-------- Start 1
       echo "===== USE ${R}"${ALIAS}"${NO} =====>  ${C}PRE:${NO} ${Y}${ENVI}${NO} ===========> ${C}Verb:${NO} ${Y}${VERB}${NO}, ${C}Kind:${NO} ${Y}${KIND}${NO}, ${C}Namespace:${NO} ${Y}${NAMESPACE}${NO} "
       if [ -z ${5} ] || [ ${5} == "-o" ]; then                                                                                          #<----- Start 2
         if [ -z ${5} ]; then                                                                                                                    #<----- Start 3
